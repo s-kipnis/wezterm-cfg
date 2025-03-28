@@ -3,6 +3,5 @@
 TGT_DIR="$HOME/.config/wezterm/"
 mkdir -p "$TGT_DIR"
 cd -- "${BASH_SOURCE%/*}"
-pwd
-rsync -avu "$TGT_DIR" "."
+rsync -avu --exclude=".git" --exclude=".github" "$TGT_DIR" "."
 cd -
