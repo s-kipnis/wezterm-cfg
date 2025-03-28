@@ -1,0 +1,5 @@
+#!/bin/bash
+
+TGT_DIR="$HOME/.config/w"
+mkdir -p "$TGT_DIR"
+rsync -avu "." "$TGT_DIR"

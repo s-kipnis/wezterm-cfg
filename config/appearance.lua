@@ -54,9 +54,13 @@ return {
    --    brightness = 0.65,
    -- },
    inactive_pane_hsb = {
-      saturation = 1,
-      brightness = 1,
+      saturation = 0.8,
+      brightness = 0.8,
    },
+
+   initial_rows = 50,
+   initial_cols = 200,
+
 
    visual_bell = {
       fade_in_function = 'EaseIn',
