@@ -4,7 +4,7 @@ local colors = require('colors.custom')
 
 return {
    max_fps = 120,
-   front_end = 'WebGpu',
+   front_end = 'OpenGL',                          -- `OpenGL`, `Software`, `WebGpu`
    webgpu_power_preference = 'HighPerformance',
    webgpu_preferred_adapter = gpu_adapters:pick_best(),
    -- webgpu_preferred_adapter = gpu_adapters:pick_manual('Dx12', 'IntegratedGpu'),
