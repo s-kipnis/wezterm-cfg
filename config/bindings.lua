@@ -13,16 +13,22 @@ elseif platform.is_win or platform.is_linux then
    mod.SUPER_REV = 'ALT|CTRL'
 end
 
+function is_an_editor(name)
+   return name:find("vim") or name:find("hx") or name:find("yazi")
+end
+
+
+
 -- stylua: ignore
 local keys = {
    -- misc/useful --
-   { key = 'F1', mods = 'NONE', action = 'ActivateCopyMode' },
-   { key = 'F2', mods = 'NONE', action = act.ActivateCommandPalette },
-   { key = 'F3', mods = 'NONE', action = act.ShowLauncher },
-   { key = 'F4', mods = 'NONE', action = act.ShowLauncherArgs({ flags = 'FUZZY|TABS' }) },
+   { key = 'F1', mods = 'SHIFT', action = 'ActivateCopyMode' },
+   { key = 'F2', mods = 'SHIFT', action = act.ActivateCommandPalette },
+   { key = 'F3', mods = 'SHIFT', action = act.ShowLauncher },
+   { key = 'F4', mods = 'SHIFT', action = act.ShowLauncherArgs({ flags = 'FUZZY|TABS' }) },
    {
       key = 'F5',
-      mods = 'NONE',
+      mods = 'SHIFT',
       action = act.ShowLauncherArgs({ flags = 'FUZZY|WORKSPACES' }),
    },
    { key = 'F11', mods = 'NONE',    action = act.ToggleFullScreen },
@@ -186,8 +192,8 @@ local keys = {
    -- panes: scroll pane
    { key = 'u',        mods = mod.SUPER, action = act.ScrollByLine(-5) },
    { key = 'd',        mods = mod.SUPER, action = act.ScrollByLine(5) },
-   { key = 'PageUp',   mods = 'NONE',    action = act.ScrollByPage(-0.75) },
-   { key = 'PageDown', mods = 'NONE',    action = act.ScrollByPage(0.75) },
+   { key = 'PageUp',   mods = 'SHIFT',    action = act.ScrollByPage(-0.75) },
+   { key = 'PageDown', mods = 'SHIFT',    action = act.ScrollByPage(0.75) },
 
    -- key-tables --
    -- resizes fonts
